@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 
-function Login() {
-
+function Login({handleLogin}) {
+  // console.log(handleLogin)
   // usestar declare
   // const [Email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -20,7 +20,7 @@ function Login() {
   // }
   const submitHandler = (e) =>{
     e.preventDefault(); 
-    
+    handleLogin(email, password); 
     setEmail(""); 
     setPassword(""); 
   }
@@ -46,7 +46,7 @@ function Login() {
                 value={email}
                 onChange={(e)=>{
                   setEmail(e.target.value); 
-                  console.log(e.target.value)
+                  // console.log(e.target.value)
                 }}
                  required
                   className="border-2 bg-transparent outline-none text-xl text-white border-emerald-600 rounded-full py-4 px-5 placeholder:text-gray-400" type="Email" placeholder="Enter your email"/>
