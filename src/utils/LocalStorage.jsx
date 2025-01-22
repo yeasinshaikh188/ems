@@ -159,9 +159,9 @@ const employees = [
 
  export const getLocalsStorage = () =>{
     const employees = JSON.parse(localStorage.getItem("employees")); 
-    console.log(employees);
     const admin = JSON.parse(localStorage.getItem("admin"));
-    console.log(admin); 
+
+    return {employees, admin}; 
  }
 
 
